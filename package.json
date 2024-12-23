@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "dev": "concurrently \"nodemon index.js\" \"npm run stripe\"",
+    "stripe": " stripe listen --forward-to localhost:5000/api/shop/order/checkout/webhook"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "concurrently": "^9.1.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "csurf": "^1.10.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.11.0",
+    "mongoose": "^8.8.4",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "raw-body": "^3.0.0",
+    "sharp": "^0.33.5",
+    "stripe": "^17.5.0",
+    "validator": "^13.12.0"
+  }
+}
